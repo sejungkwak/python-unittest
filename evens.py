@@ -7,7 +7,8 @@ def even_number_of_evens(numbers):
     if the number of even numbers is 0, return False
     if the number of even numbers is even, return True
     """
-    return None
+    return True
 
 
-print(even_number_of_evens(5))
+if __name__ == '__main__':
+    print(even_number_of_evens(5))
