@@ -8,22 +8,11 @@ def even_number_of_evens(numbers):
     if the number of even numbers is even, return True
     """
 
-    if isinstance(numbers, list):
-        if numbers == []:
-            return False
-        else:
-            evens = 0
-
-        for num in numbers:
-            if num % 2 == 0:
-                evens += 1
-        if evens:
-            return evens % 2 == 0
-        else:
-            return False
-
-    else:
+    if not isinstance(numbers, list):
         raise TypeError("A list was not passed into the function")
+
+    evens = sum(1 for num in numbers if num % 2 == 0)
+    return bool(evens and evens % 2 == 0)
 
 
 if __name__ == '__main__':
