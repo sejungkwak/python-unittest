@@ -22,3 +22,6 @@ class Student:
 
     def alert_santa(self):
         self.naughty_list = True
+
+    def apply_extention(self, days):
+        self.end_date += timedelta(days=days)
